@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PETFAX</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Introducing {{pet.pet_name}}</h1>
+    <img
+      src="{{ pet.pet_photo }}"
+      alt="Photo of pet"
+      width="250px"
+      height="250px"
+    />
+    <h2 class="funfacts">Fun Facts:</h2>
+    <h3 class="petFacts">{{pet.pet_fact}}</h3>
+    <a href="/pets" class="petsMoreButton">Go Back</a>
+    <a href="/pets/new" class="petsMoreButton">Add More Facts</a>
+  </body>
+</html>
