@@ -15,6 +15,3 @@ def specificID(pet_id):
     pet = pets[pet_id-1]
     return render_template('pet.html' , pet = pet)
 
-@bp.route('/new')
-def form():
-    return render_template('form.html' )
