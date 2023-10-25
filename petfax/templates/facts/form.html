@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PETFAX</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <h1>PetFax Form</h1>
+    <form class="formoutterbox" action="/facts" method="POST">
+      <label for="name">Name:</label><br />
+      <input type="text" id="name" name="submitter" /><br />
+      <label for="fact">Facts:</label><br />
+      <input type="text" id="fact" name="fact" />
+      <input type="submit" />
+    </form>
+  </body>
+</html>

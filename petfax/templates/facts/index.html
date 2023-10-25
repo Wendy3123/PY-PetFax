@@ -10,13 +10,10 @@
     />
   </head>
   <body>
-    <h1>PetFax Form</h1>
-    <form class="formoutterbox">
-      <label for="name">Name:</label><br />
-      <input type="text" id="name" name="name" /><br />
-      <label for="facts">Facts:</label><br />
-      <input type="text" id="facts" name="facts" />
-      <input type="submit" />
-    </form>
+    <h1>Fun Facts!</h1>
+    {% for fact in facts %}
+    <h4 class="factsindexComments1">Submitted by {{fact.submitter}}:</h4>
+    <p class="factsindexComments2">{{fact.fact}}</p>
+    {% endfor %}
   </body>
 </html>
